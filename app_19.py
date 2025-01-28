@@ -72,6 +72,7 @@ st.markdown(f"""
         z-index: 1000;
     }}
     </style>
+
 """, unsafe_allow_html=True)
 
 # Load the trained PyTorch model
