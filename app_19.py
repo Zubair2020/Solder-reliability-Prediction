@@ -74,6 +74,19 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
+# Inject custom CSS to style the tab labels
+st.markdown("""
+    <style>
+    div[role="tablist"] > div {
+        font-size: 1.2em; /* Adjust the font size as needed */
+        font-weight: bold; /* Optional: Make the text bold */
+        color: #4A90E2; /* Optional: Change the text color */
+        font-family: 'Arial', sans-serif; /* Optional: Set the font */
+        text-align: center;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 # Load the trained PyTorch model
 MODEL_PATH = "saved_models/final_model.pth"
 
@@ -130,9 +143,9 @@ component_coefficients = {
 solder_coefficients = {
     "SAC105": 8.74496,
     "SAC387": 12.45773,
-    "SA396P": 22.31338,
-    "SAC107": -23.20746,
-    "SA387P": -20.30861
+    "SAC396+Sb": 22.31338,
+    "SAC107+BiIn": -23.20746,
+    "SAC387+SbBiNi": -20.30861
 }
 
 # Add tabs
