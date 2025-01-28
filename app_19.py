@@ -13,10 +13,6 @@ def get_svg_image(path):
         encoded_string = base64.b64encode(image_file.read()).decode()
     return encoded_string
 
-# Load and encode the SVG image from the local path
-svg_image_path = "D:/THI_work/StochasticNN/paper_second/image/Picture1.svg"
-encoded_svg_image = get_svg_image(svg_image_path)
-
 # CSS for responsive design and global styling
 st.markdown(f"""
     <style>
@@ -76,8 +72,6 @@ st.markdown(f"""
         z-index: 1000;
     }}
     </style>
-
-    <img src="data:image/svg+xml;base64,{encoded_svg_image}" class="top-right" alt="Picture1">
 """, unsafe_allow_html=True)
 
 # Load the trained PyTorch model
