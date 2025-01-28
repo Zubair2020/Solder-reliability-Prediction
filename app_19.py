@@ -74,19 +74,6 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
-# Inject custom CSS to style the tab labels
-st.markdown("""
-    <style>
-    div[role="tablist"] > div {
-        font-size: 2.0em; /* Adjust the font size as needed */
-        font-weight: bold; /* Optional: Make the text bold */
-        color: #4A90E2; /* Optional: Change the text color */
-        font-family: 'Arial', sans-serif; /* Optional: Set the font */
-        text-align: center;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
 # Load the trained PyTorch model
 MODEL_PATH = "saved_models/final_model.pth"
 
@@ -266,7 +253,6 @@ with tab1:
         st.plotly_chart(fig, use_container_width=True)
 
 # Tab 2: MTS Prediction Model
-# Tab 2: MTS Prediction Model
 with tab2:
     st.markdown('<h1 class="main-title">MTS Model Prediction</h1>', unsafe_allow_html=True)
 
@@ -311,7 +297,7 @@ with tab2:
     # Update graph layout for better display
     fig.update_layout(
         title={
-            'text': "MTS Model: Cycle Numbers by Component and Solder Type",
+            'text': "Cycle Numbers by Component and Solder Type",
             'x': 0.5,
             'xanchor': 'center',
             'font': {'size': 24}
@@ -340,7 +326,7 @@ with tab2:
 
     # Display highlighted prediction
     if st.button("Predict Lifetime (MTS)"):
-        st.markdown(f"### **Predicted Cycle Number (MTS Model): {highlighted_cycle_number:.2f} cycles**")
+        st.markdown(f"### **Predicted Cycle Number: {highlighted_cycle_number:.2f} cycles**")
 
 
 # Tab 3: Xitaso Prediction Model
