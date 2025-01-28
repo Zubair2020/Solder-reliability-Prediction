@@ -78,7 +78,7 @@ st.markdown(f"""
 st.markdown("""
     <style>
     div[role="tablist"] > div {
-        font-size: 1.2em; /* Adjust the font size as needed */
+        font-size: 2.0em; /* Adjust the font size as needed */
         font-weight: bold; /* Optional: Make the text bold */
         color: #4A90E2; /* Optional: Change the text color */
         font-family: 'Arial', sans-serif; /* Optional: Set the font */
