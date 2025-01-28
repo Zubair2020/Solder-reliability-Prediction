@@ -306,7 +306,7 @@ with tab2:
         xaxis_title="Component - Solder Type",
         yaxis_title="Cycle Number",
         xaxis=dict(
-            tickangle=45,
+            tickangle=-45,
             title_font=dict(size=18),
             tickfont=dict(size=12),
             automargin=True
