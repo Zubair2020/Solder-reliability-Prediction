@@ -77,7 +77,7 @@ min_max_values = {
 
 # === TAB 1: THI with Subtabs ===
 with tab1:
-    subtab1, subtab2 = st.tabs(["LED Lifetime Prediction", "3D Point Cloud Prediction"])
+    subtab1, subtab2 = st.tabs(["LED Lifetime Prediction", "AI Based Solder reliability Prediction using 3D FEA data"])
 
     with subtab1:
         model = LifetimePredictionModel(4, 7, 2, 2, 7, 8)
